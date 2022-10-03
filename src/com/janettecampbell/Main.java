@@ -24,8 +24,9 @@ public class Main {
         float monthlyRate = (annualRate / PERCENT) / MONTHS_IN_YEAR;
         float payments = years * MONTHS_IN_YEAR;
         double mortgage = principle * ((monthlyRate * (Math.pow(1 + monthlyRate,payments))) / (Math.pow(1 + monthlyRate, payments) - 1));
+        String mortgageFormatted = currency.format(mortgage);
 
-        System.out.println(currency.format(mortgage));
+        System.out.println(mortgageFormatted);
 
 
 
